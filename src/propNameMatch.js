@@ -2,9 +2,15 @@
 "use strict";
 
 const {
-  T,       add,   always,    compose,  concat,   cond,  equals,
-  filter,  flip,  identity,  ifElse,   invoker,  is,
-  map,     not,   propOr,    reduce,   tap,      test,  toLower,
+  T,
+  always,
+  compose,
+  cond,
+  equals,
+  identity,
+  is,
+  propOr,
+  toLower
 } = require("ramda");
 
 const ensureStr = cond([
