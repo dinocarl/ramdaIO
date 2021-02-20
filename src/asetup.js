@@ -23,6 +23,12 @@ const {
   test,
   toLower
 } = require("ramda");
+const {
+  isntEmpty,
+  isntNil,
+  basicValidations,
+  nilChecks
+} = require('./utils');
 
 
 module.exports = identity('ready');
