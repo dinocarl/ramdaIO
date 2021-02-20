@@ -5,6 +5,7 @@ const {
   T,
   add,
   always,
+  complement,
   compose,
   concat,
   cond,
@@ -15,19 +16,25 @@ const {
   ifElse,
   invoker,
   is,
+  isNil,
+  join,
+  juxt,
+  last,
   map,
   not,
   propOr,
   reduce,
+  reject,
+  replace,
   tap,
   test,
-  toLower
+  toLower,
 } = require("ramda");
 const {
   isntEmpty,
   isntNil,
   basicValidations,
-  nilChecks
+  nilChecks,
 } = require('./utils');
 
 
