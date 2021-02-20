@@ -1,7 +1,7 @@
 {
-    "name": "ramdarepl",
+    "name": "ramdaio",
     "version": "0.1.0",
-    "description": "",
+    "description": "Create, run, and test functions built with ramda usind Node and a console",
     "main": "index.js",
     "watch": {
         "𝛌": "{src,test}/*.js"
@@ -12,6 +12,7 @@
         "watch": "npm-watch | grep --invert-match nodemon"
     },
     "notes":[
+        "To use, run 'npm run watch' in a Terminal",
         "grep command in watch script is to silent extra messaging from nodemon, because nodemon configs wouldn't quiet them"
     ],
     "author": "",
