@@ -1,0 +1,24 @@
+{
+    "name": "ramdarepl",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "watch": {
+        "𝛌": "{src,test}/*.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "𝛌": "node src/buffer.js",
+        "watch": "npm-watch | grep --invert-match nodemon"
+    },
+    "notes":[
+        "grep command in watch script is to silent extra messaging from nodemon, because i couldn't get nodemon configs to quiet them"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "npm-watch": "^0.7.0",
+        "ramda": "^0.27.1",
+        "repl.history": "^0.1.4"
+    }
+}
