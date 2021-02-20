@@ -15,8 +15,8 @@ const {
 const {
   isntEmpty,
   isntNil,
-  basicValidations,
-  nilChecks,
+  validateBasic,
+  validateNil,
 } = require('./utils');
 
 const isCaseA = equals('caseA');
@@ -35,11 +35,11 @@ const assembleLinkPieces = ({
 }) => (
   reject(isNil,
     [
-      isntCaseA(brand) && basicValidations(officePhone) ? 'Call' : null,
-      isntCaseA(brand) && basicValidations(officePhone) && basicValidations(displayFirstName) ? displayFirstName : null,
-      isntCaseA(brand) && basicValidations(officePhone) && basicValidations(firstName) && nilChecks(displayFirstName) ? firstName : null,
-      basicValidations(officePhone) ? formatPhone(officePhone) : null,
-      isCaseA(brand) && basicValidations(fallbackPhone) && nilChecks(officePhone) ? formatPhone(fallbackPhone) : null,
+      isntCaseA(brand) && validateBasic(officePhone) ? 'Call' : null,
+      isntCaseA(brand) && validateBasic(officePhone) && validateBasic(displayFirstName) ? displayFirstName : null,
+      isntCaseA(brand) && validateBasic(officePhone) && validateBasic(firstName) && validateNil(displayFirstName) ? firstName : null,
+      validateBasic(officePhone) ? formatPhone(officePhone) : null,
+      isCaseA(brand) && validateBasic(fallbackPhone) && validateNil(officePhone) ? formatPhone(fallbackPhone) : null,
     ]
   )
 );

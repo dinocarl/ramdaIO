@@ -33,8 +33,8 @@ const {
 const {
   isntEmpty,
   isntNil,
-  basicValidations,
-  nilChecks,
+  validateBasic,
+  validateNil,
 } = require('./utils');
 
 
