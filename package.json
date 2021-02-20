@@ -12,7 +12,7 @@
         "watch": "npm-watch | grep --invert-match nodemon"
     },
     "notes":[
-        "grep command in watch script is to silent extra messaging from nodemon, because i couldn't get nodemon configs to quiet them"
+        "grep command in watch script is to silent extra messaging from nodemon, because nodemon configs wouldn't quiet them"
     ],
     "author": "",
     "license": "ISC",

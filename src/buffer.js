@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
-const output = require('./setup');
+const output = require('./asetup');
 
 // clear the console
 console.log('\x1Bc');
