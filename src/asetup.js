@@ -15,6 +15,7 @@ const {
   equals,
   filter,
   flip,
+  gte,
   identity,
   ifElse,
   inc,
@@ -53,5 +54,10 @@ const {
   validateNil,
 } = require('./utils');
 
-
-module.exports = identity('ready');
+module.exports = identity(`
+┌────────────────────────────────┐
+│           - ready -            │
+│ replace the export in *asetup* │
+│       to see new output        │
+└────────────────────────────────┘
+`);
