@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 "use strict";
 
+// update the require below
 const output = require('./asetup');
 
 // clear the console
