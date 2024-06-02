@@ -1,7 +1,7 @@
 {
     "name": "ramdaio",
     "version": "0.1.0",
-    "description": "Create, run, and test functions built with ramda usind Node and a console",
+    "description": "Create, run, and test functions built with ramda using Node and a console",
     "main": "index.js",
     "watch": {
         "𝛌": "{src,test}/*.js"
