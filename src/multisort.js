@@ -1,9 +1,9 @@
 const {
   T,
-  ascend,
+  // ascend,
   compose,
   cond,
-  descend,
+  // descend,
   equals,
   flip,
   head,
@@ -21,12 +21,24 @@ const {
   tail,
 } = require("ramda");
 
+var descend = (fn) => (a, b) => {
+  var aa = fn(a);
+  var bb = fn(b);
+  return aa > bb ? -1 : aa < bb ? 1 : 0;
+};
+
+var ascend = (fn) => (a, b) => {
+  var aa = fn(a);
+  var bb = fn(b);
+  return aa < bb ? -1 : aa > bb ? 1 : 0;
+};
+
 const customSortOrders = {
   weirdOrder: [
     'fffff',
     'ddddd',
-    'ccccc',
     'bbbbb',
+    'ccccc',
   ]
 };
 
@@ -73,13 +85,14 @@ const sortByColumns = compose(
 
 const sortIncome = sortByColumns([
   'custom:weirdOrder:type,asc',
-  'amount,asc',
+  'amount,desc',
+  // 'name,asc',
 ]);
 
 module.exports = sortIncome([
-  { name: 'alice', type: 'bbbbb', amount: 41 },
-  { name: 'bob', type: 'ccccc', amount: 30 },
+  { name: 'sarah', type: 'fffff', amount: 43 },
+  { name: 'alice', type: 'bbbbb', amount: 43 },
+  { name: 'bob',   type: 'ccccc', amount: 30 },
   { name: 'clara', type: 'fffff', amount: 47 },
-  { name: 'alice', type: 'fffff', amount: 43 },
-  { name: 'bob', type: 'ccccc', amount: 31 },
+  { name: 'rob',   type: 'ccccc', amount: 31 },
 ]);
