@@ -60,7 +60,7 @@ const parseFilterTuples = (filterTuple) => Array.isArray(path([1], filterTuple))
 // 3. Apply the filtering function created by 2) to
 //    the function returned by 1) which returns a
 //    consolidated filtering function
-const parseableFilter = (recipe) => tacitOr(recipe)(
+const parseableFilter = (recipe) => tacitOr(recipe[0])(
   recipe.map(
     parseFilterTuples
   )
